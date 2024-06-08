@@ -9,11 +9,13 @@ Implement a method to withdraw money from the account.
  */
 public class Account {
     private String accountNumber;
-    BigDecimal accountBalance;
+    private BigDecimal accountBalance;
+    private Client customer;
 
-    public Account(String accountNumber, BigDecimal accountBalance) {
+    public Account(String accountNumber, BigDecimal accountBalance, Client customer) {
         this.accountNumber = accountNumber;
         this.accountBalance = accountBalance;
+        this.customer = customer;
     }
     public BigDecimal depositMoney(BigDecimal amount) {
         return accountBalance.add(amount);
